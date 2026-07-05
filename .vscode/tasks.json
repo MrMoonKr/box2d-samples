@@ -1,0 +1,71 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "vs2022-debug"
+      ]
+    },
+    {
+      "label": "Build samples (Debug)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "build-debug",
+        "--target",
+        "samples"
+      ],
+      "dependsOn": "Configure Debug"
+    },
+    {
+      "label": "Configure RelWithDebInfo",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "vs2022-relwithdebinfo"
+      ]
+    },
+    {
+      "label": "Build samples (RelWithDebInfo)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "build-relwithdebinfo",
+        "--target",
+        "samples"
+      ],
+      "dependsOn": "Configure RelWithDebInfo"
+    },
+    {
+      "label": "Configure Release",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "vs2022-release"
+      ]
+    },
+    {
+      "label": "Build samples (Release)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "build-release",
+        "--target",
+        "samples"
+      ],
+      "dependsOn": "Configure Release"
+    }
+  ]
+}

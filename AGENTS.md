@@ -368,7 +368,7 @@ include path는 target 기반으로만 설정한다.
 예:
 
 - 로컬 헤더: `#include "draw.h"`, `#include "sample.h"`, `#include "utils.h"`
-- 외부 헤더: `#include <box2d/box2d.h>`, `#include <glad/glad.h>`, `#include <GLFW/glfw3.h>`, `#include <imgui.h>`, `#include <implot.h>`, `#include <nfd.h>`, `#include <jsmn.h>`
+- 외부 헤더: `#include <box2d/box2d.h>`, `#include <glad/gl.h>`, `#include <GLFW/glfw3.h>`, `#include <imgui.h>`, `#include <implot.h>`, `#include <nfd.h>`, `#include <jsmn.h>`
 
 원칙:
 
